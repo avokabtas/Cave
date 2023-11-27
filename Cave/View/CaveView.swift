@@ -54,11 +54,6 @@ struct CaveView: View {
                         Text("Columns: \(columns)")
                     }
                     .accessibilityIdentifier("ColumnsStepper") // For UITests
-                    
-                    Stepper(value: $chance, in: 0...100) {
-                        Text("Chance: \(chance)%")
-                    }
-                    .accessibilityIdentifier("ChanceStepper") // For UITests
                 }
                 .padding()
                 
@@ -80,6 +75,11 @@ struct CaveView: View {
                         Text("Death Limit: \(deathLimit)")
                     }
                     .accessibilityIdentifier("DeathLimitStepper") // For UITests
+                    
+                    Stepper(value: $chance, in: 0...100) {
+                        Text("Chance: \(chance)%")
+                    }
+                    .accessibilityIdentifier("ChanceStepper") // For UITests
                 }
                 .padding()
                 

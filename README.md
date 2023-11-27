@@ -22,10 +22,10 @@ Generation using a cellular automaton.
 
 ### Основные возможности
 
-- Максимальный размер пещеры - 50 х 50
+- Пользователем задается размер пещеры: количество строк и столбцов, максимальный размер - 50 х 50
 - Пользователем задаются пределы "рождения" и "смерти" клетки, а также шанс на начальную инициализацию клетки
 - Пределы "рождения" и "смерти" могут иметь значения от 0 до 7
-- Должен быть предусмотрен пошаговый режим отрисовки результатов работы алгоритма в двух вариантах:
+- Предусмотрен пошаговый режим отрисовки результатов работы алгоритма в двух вариантах:
   - По нажатию на кнопку следующего шага отрисовывается очередная итерация работы алгоритма
   - По нажатию на кнопку автоматической работы запускается отрисовка итераций работы алгоритма с частотой 1 шаг в `N` миллисекунд, где число миллисекунд `N` задаётся через специальное поле в пользовательском интерфейсе
 
@@ -52,10 +52,10 @@ If "live" cells are surrounded by "live" cells, the number of which is less than
 
 ### Main features
 
-- Maximum size of the cave is 50 x 50
+- The user sets the size of the cave: the number of rows and columns, the maximum size is 50 x 50
 - The user sets the limits for "birth" and "death" of a cell, as well as the chance for the starting initialization of the cell
 - The "birth" and "death" limits can have values from 0 to 7
-- There should be a step-by-step mode for rendering the results of the algorithm in two variants:
+- A step-by-step mode of rendering the algorithm results in two variants is provided:
     - Pressing the next step button will lead to rendering the next iteration of the algorithm
     - Pressing the automatic work button starts rendering iterations of the algorithm with a frequency of 1 step in `N` milliseconds, where the number of milliseconds `N` is set through a special field in the user interface
 

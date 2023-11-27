@@ -41,17 +41,17 @@ final class CaveUITests: XCTestCase {
         // Найдем элементы Stepper
         let rowsStepper = app.steppers["RowsStepper"]
         let columnsStepper = app.steppers["ColumnsStepper"]
-        let chanceStepper = app.steppers["ChanceStepper"]
         let birthLimitStepper = app.steppers["BirthLimitStepper"]
         let deathLimitStepper = app.steppers["DeathLimitStepper"]
+        let chanceStepper = app.steppers["ChanceStepper"]
         let autoStepTimeStepper = app.steppers["AutoStepTimeStepper"]
         
         // Проверим, что Stepper существует на экране
         XCTAssertTrue(rowsStepper.exists)
         XCTAssertTrue(columnsStepper.exists)
-        XCTAssertTrue(chanceStepper.exists)
         XCTAssertTrue(birthLimitStepper.exists)
         XCTAssertTrue(deathLimitStepper.exists)
+        XCTAssertTrue(chanceStepper.exists)
         XCTAssertTrue(autoStepTimeStepper.exists)
     }
     
