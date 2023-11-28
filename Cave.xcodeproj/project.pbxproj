@@ -16,6 +16,8 @@
 		86AE65302B11DEB900393D57 /* Cave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AE652F2B11DEB900393D57 /* Cave.swift */; };
 		86AE65332B11DEF500393D57 /* CaveArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AE65322B11DEF500393D57 /* CaveArea.swift */; };
 		86AE65392B11E46F00393D57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AE65382B11E46F00393D57 /* LaunchScreen.storyboard */; };
+		86DF2B052B15BD0F0003C492 /* CaveSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF2B042B15BD0F0003C492 /* CaveSizeView.swift */; };
+		86DF2B072B15BD3F0003C492 /* CaveLimitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF2B062B15BD3F0003C492 /* CaveLimitsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		86AE652F2B11DEB900393D57 /* Cave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cave.swift; sourceTree = "<group>"; };
 		86AE65322B11DEF500393D57 /* CaveArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaveArea.swift; sourceTree = "<group>"; };
 		86AE65382B11E46F00393D57 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86DF2B042B15BD0F0003C492 /* CaveSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaveSizeView.swift; sourceTree = "<group>"; };
+		86DF2B062B15BD3F0003C492 /* CaveLimitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaveLimitsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				86AE65062B11DE2F00393D57 /* CaveView.swift */,
+				86DF2B062B15BD3F0003C492 /* CaveLimitsView.swift */,
+				86DF2B042B15BD0F0003C492 /* CaveSizeView.swift */,
 				86AE65322B11DEF500393D57 /* CaveArea.swift */,
 				86AE65382B11E46F00393D57 /* LaunchScreen.storyboard */,
 			);
@@ -298,8 +304,10 @@
 			files = (
 				86AE65302B11DEB900393D57 /* Cave.swift in Sources */,
 				86AE65072B11DE2F00393D57 /* CaveView.swift in Sources */,
+				86DF2B052B15BD0F0003C492 /* CaveSizeView.swift in Sources */,
 				86AE65052B11DE2F00393D57 /* CaveApp.swift in Sources */,
 				86AE65332B11DEF500393D57 /* CaveArea.swift in Sources */,
+				86DF2B072B15BD3F0003C492 /* CaveLimitsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

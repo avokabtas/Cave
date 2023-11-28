@@ -20,9 +20,9 @@ struct CaveView: View {
     
     @State private var rows = 20
     @State private var columns = 20
-    @State private var chance = 45  // %
     @State private var birthLimit = 3
     @State private var deathLimit = 4
+    @State private var chance = 45  // %
     @State private var autoStepTime = 500  // Milliseconds
     
     // MARK: - Visual Components
@@ -40,54 +40,19 @@ struct CaveView: View {
                 
                 // MARK: - Size Settings
                 
-                VStack {
-                    Text("Set the size")
-                        .fontWeight(.bold)
-                        .font(.system(.title3, design: .rounded))
-                    
-                    Stepper(value: $rows, in: 1...50) {
-                        Text("Rows: \(rows)")
-                    }
-                    .accessibilityIdentifier("RowsStepper") // For UITests
-                    
-                    Stepper(value: $columns, in: 1...50) {
-                        Text("Columns: \(columns)")
-                    }
-                    .accessibilityIdentifier("ColumnsStepper") // For UITests
-                }
-                .padding()
+                CaveSizeView(rows: rows, columns: columns)
                 
                 Spacer(minLength: 0)
                 
                 // MARK: - Limits Settings
                 
-                VStack {
-                    Text("Set the limits")
-                        .fontWeight(.bold)
-                        .font(.system(.title3, design: .rounded))
-                    
-                    Stepper(value: $birthLimit, in: 0...7) {
-                        Text("Birth Limit: \(birthLimit)")
-                    }
-                    .accessibilityIdentifier("BirthLimitStepper") // For UITests
-                    
-                    Stepper(value: $deathLimit, in: 0...7) {
-                        Text("Death Limit: \(deathLimit)")
-                    }
-                    .accessibilityIdentifier("DeathLimitStepper") // For UITests
-                    
-                    Stepper(value: $chance, in: 0...100) {
-                        Text("Chance: \(chance)%")
-                    }
-                    .accessibilityIdentifier("ChanceStepper") // For UITests
-                }
-                .padding()
+                CaveLimitsView(birthLimit: birthLimit, deathLimit: deathLimit, chance: chance)
                 
                 Spacer(minLength: 10)
                 
-                // MARK: - Clear Button
-                
                 HStack {
+                    // MARK: - Clear Button
+                    
                     Button("Clear") {
                         stopTimer()  // Останавливаем работу таймера
                         caveMap = [] // Очистка массива пещеры
