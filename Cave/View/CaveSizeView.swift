@@ -11,8 +11,8 @@ struct CaveSizeView: View {
     
     // MARK: - Public Properties
     
-    @State var rows: Int
-    @State var columns: Int
+    @Binding var rows: Int
+    @Binding var columns: Int
     
     // MARK: - Visual Components
     

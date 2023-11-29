@@ -40,13 +40,13 @@ struct CaveView: View {
                 
                 // MARK: - Size Settings
                 
-                CaveSizeView(rows: rows, columns: columns)
+                CaveSizeView(rows: $rows, columns: $columns)
                 
                 Spacer(minLength: 0)
                 
                 // MARK: - Limits Settings
                 
-                CaveLimitsView(birthLimit: birthLimit, deathLimit: deathLimit, chance: chance)
+                CaveLimitsView(birthLimit: $birthLimit, deathLimit: $deathLimit, chance: $chance)
                 
                 Spacer(minLength: 10)
                 

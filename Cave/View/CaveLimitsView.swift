@@ -11,9 +11,9 @@ struct CaveLimitsView: View {
     
     // MARK: - Public Properties
     
-    @State var birthLimit: Int
-    @State var deathLimit: Int
-    @State var chance: Int
+    @Binding var birthLimit: Int
+    @Binding var deathLimit: Int
+    @Binding var chance: Int
     
     // MARK: - Visual Components
     
