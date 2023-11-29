@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CaveLimitsView: View {
+struct CaveLimits: View {
     
     // MARK: - Public Properties
     
