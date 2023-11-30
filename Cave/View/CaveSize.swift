@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct CaveSize: View {
-    
-    // MARK: - Public Properties
-    
     @Binding var rows: Int
     @Binding var columns: Int
-    
-    // MARK: - Visual Components
     
     var body: some View {
         VStack {

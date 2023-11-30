@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct CaveLimits: View {
-    
-    // MARK: - Public Properties
-    
     @Binding var birthLimit: Int
     @Binding var deathLimit: Int
     @Binding var chance: Int
-    
-    // MARK: - Visual Components
     
     var body: some View {
         VStack {

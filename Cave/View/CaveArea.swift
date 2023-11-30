@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct CaveArea: View {
-    
-    // MARK: - Public Properties
-    
     var caveMap: [[Bool]]
-    
-    // MARK: - Visual Components
     
     var body: some View {
         GeometryReader { geometry in

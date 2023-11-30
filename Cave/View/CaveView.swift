@@ -50,24 +50,15 @@ struct CaveView: View {
                 
                 Spacer(minLength: 10)
                 
+                // MARK: - Buttons Section
+                
                 HStack {
-                    // MARK: - Clear Button
-                    
-                    Button("Clear") {
+                    ClearButton {
                         stopTimer()  // Останавливаем работу таймера
                         caveMap = [] // Очистка массива пещеры
                     }
-                    .font(.system(.headline, design: .rounded))
-                    .foregroundColor(.white)
-                    .padding(.horizontal)
-                    .tint(.red)
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
-                    
-                    // MARK: - Generate Button
-                    
-                    Button("Generate") {
-                        stopTimer()  // Останавливаем работу таймера
+                    GenerateButton {
+                        stopTimer()
                         cave.setWidth(columns)
                         cave.setHeight(rows)
                         cave.setBirthLimit(birthLimit)
@@ -76,41 +67,17 @@ struct CaveView: View {
                         cave.initCave()
                         drawCave()
                     }
-                    .font(.system(.headline, design: .rounded))
-                    .lineLimit(1) // Ограничиваем количество строк текста до одной - iPhone mini
-                    .minimumScaleFactor(0.5) // Минимальный масштаб текста - iPhone mini
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-                    .tint(.black)
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
-                    
-                    // MARK: - Manual Step Button
-                    
-                    Button("Step") {
-                        stopTimer()  // Останавливаем работу таймера
+                    ManualStepButton {
+                        stopTimer()
                         stepCave()
                     }
-                    .font(.system(.headline, design: .rounded))
-                    .foregroundColor(.white)
-                    .padding(.horizontal)
-                    .tint(.indigo)
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
                 }
                 
                 Spacer(minLength: 10)
                 
-                // MARK: - Auto Step Button
-                
                 HStack {
-                    Stepper(value: $autoStepTime, in: 100...2000, step: 100) {
-                        Text("1 step in \(autoStepTime) ms")
-                    }
-                    .accessibilityIdentifier("AutoStepTimeStepper") // For UITests
-                    .padding()
-                    
-                    Button("Auto") {
+                    AutoStepTimeStepper(autoStepTime: $autoStepTime)
+                    AutoStepButton {
                         if !isTimerRunning { // Проверяем, не запущен ли уже таймер
                             timer = Timer.scheduledTimer(withTimeInterval: Double(autoStepTime) / 1000, repeats: true) { _ in
                                 stepCave()
@@ -118,13 +85,8 @@ struct CaveView: View {
                             isTimerRunning = true // Устанавливаем флаг, что таймер запущен
                         }
                     }
-                    .font(.system(.headline, design: .rounded))
-                    .foregroundColor(.white)
-                    .tint(.orange)
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
-                    .padding()
                 }
+                
             }
             .frame(maxWidth: .infinity)
             Spacer()
