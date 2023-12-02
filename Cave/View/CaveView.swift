@@ -11,7 +11,7 @@ struct CaveView: View {
     
     // MARK: - Private Properties
     
-    @State private var cave = Cave()
+    @StateObject private var cave = Cave()
     @State private var caveMap: [[Bool]] = []
     @State private var timer: Timer?
     @State private var isTimerRunning = false // Состояние для отслеживания статуса таймера

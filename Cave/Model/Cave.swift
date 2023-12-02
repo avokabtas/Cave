@@ -7,20 +7,20 @@
 
 import Foundation
 
-final class Cave {
+final class Cave: ObservableObject {
     
     // MARK: - Private Properties
     
     // Ширина и высота пещеры
-    private var width: Int = 0
-    private var height: Int = 0
+    @Published private var width: Int = 0
+    @Published private var height: Int = 0
     // Шанс начальной инициализации
-    private var chance: Int = 0
+    @Published private var chance: Int = 0
     // Лимиты рождения и смерти клеток
-    private var birthLimit: Int = 0
-    private var deathLimit: Int = 0
+    @Published private var birthLimit: Int = 0
+    @Published private var deathLimit: Int = 0
     // Двумерный массив Bool, представляющий пещеру (true - клетка заполнена, false - пустая клетка)
-    private var caveMap: [[Bool]] = []
+    @Published private var caveMap: [[Bool]] = []
     
     // MARK: - Init
     
